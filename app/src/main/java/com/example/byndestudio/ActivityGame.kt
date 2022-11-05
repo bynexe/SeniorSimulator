@@ -13,5 +13,8 @@ class ActivityGame : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bClass = ActivityGameBinding.inflate(layoutInflater)
         setContentView(bClass.root)
+
+        bClass.job1.setOnClickListener() {
+        }
     }
 }
