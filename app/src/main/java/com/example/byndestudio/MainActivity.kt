@@ -1,7 +1,9 @@
 package com.example.byndestudio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.byndestudio.databinding.ActivityMainBinding
 
 lateinit var bindingClass : ActivityMainBinding
@@ -11,5 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(s)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+
+        bindingClass.bStartGame.setOnClickListener {
+            val intent = Intent(this, ActivityGame::class.java)
+            startActivity(intent)
+        }
     }
 }
