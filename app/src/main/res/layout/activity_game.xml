@@ -4,4 +4,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityGame"/>
+    android:background="#5DB075"
+    tools:context=".ActivityGame">
+
+    <View
+        android:id="@+id/EView"
+        android:layout_width="303dp"
+        android:layout_height="263dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/EConfirm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="@+id/EView"
+        app:layout_constraintEnd_toEndOf="@+id/EView"
+        app:layout_constraintStart_toStartOf="@+id/EView" />
+
+    <TextView
+        android:id="@+id/ETitle"
+        android:layout_width="289dp"
+        android:layout_height="26dp"
+        android:text="Text View!"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/EView"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/EView"
+        app:layout_constraintTop_toTopOf="@+id/EView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="293dp"
+        android:layout_height="26dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/EConfirm"
+        app:layout_constraintEnd_toEndOf="@+id/EView"
+        app:layout_constraintStart_toStartOf="@+id/EView"
+        app:layout_constraintTop_toTopOf="@+id/EView" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="ETitle,EConfirm,EView,textView2" />
+
+    <View
+        android:id="@+id/ViewDONTUSE"
+        android:layout_width="124dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDONTUSE2"
+        android:layout_width="108dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDONTUSE4"
+        android:layout_width="199dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ViewDONTUSE" />
+
+    <ProgressBar
+        android:id="@+id/barCoherence"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="108dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/progressbar_coherence"
+        app:layout_constraintEnd_toEndOf="@+id/ViewDONTUSE"
+        app:layout_constraintStart_toStartOf="@+id/viewDONTUSE4"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="123dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="5dp"
+        android:text="М О Я   К О М А Н Д А"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewDONTUSE4"
+        app:layout_constraintStart_toStartOf="@+id/viewDONTUSE4"
+        app:layout_constraintTop_toTopOf="@+id/viewDONTUSE4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="СЛАЖЕННОСТЬ"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewDONTUSE4"
+        app:layout_constraintEnd_toEndOf="@+id/viewDONTUSE4"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <TextView
+        android:id="@+id/totalMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:text="Баланс"
+        android:textColor="#666666"
+        app:layout_constraintBottom_toBottomOf="@+id/ViewDONTUSE"
+        app:layout_constraintStart_toStartOf="@+id/ViewDONTUSE"
+        app:layout_constraintTop_toTopOf="@+id/ViewDONTUSE"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="40dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:text="250$"
+        android:textColor="#1D7821"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalMoney"
+        app:layout_constraintEnd_toEndOf="@+id/ViewDONTUSE"
+        app:layout_constraintTop_toTopOf="@+id/totalMoney"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ViewDONTUSE,totalMoney,money" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#EAEAEA"
+        android:text="30 ДНЕЙ"
+        android:textColor="#454444"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewDONTUSE2"
+        app:layout_constraintEnd_toEndOf="@+id/viewDONTUSE2"
+        app:layout_constraintStart_toStartOf="@+id/viewDONTUSE2"
+        app:layout_constraintTop_toTopOf="@+id/viewDONTUSE2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

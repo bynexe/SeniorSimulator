@@ -4,7 +4,7 @@
         <shape android:shape="line">
             <stroke
                 android:width="3dp"
-                android:color="#FFDDAA"
+                android:color="#374AB3"
                 android:dashWidth="20dp"
                 android:dashGap="7dp" />
         </shape>
@@ -17,7 +17,7 @@
             <shape android:shape="line">
                 <stroke
                     android:width="3dp"
-                    android:color="#2299FF"
+                    android:color="#3F51B5"
                     android:dashWidth="21dp"
                     android:dashGap="7dp" />
             </shape>
