@@ -105,7 +105,7 @@
         app:constraint_referenced_ids="ViewDONTUSE,totalMoney,money" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="#EAEAEA"
@@ -122,6 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewDONTUSE4"
         tools:layout_editor_absoluteX="178dp">
@@ -197,7 +198,7 @@
         android:background="@drawable/rounded"
         android:gravity="top"
         android:orientation="vertical"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,8 +207,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/exitBuyMenu">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,6 +229,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="2"
                     android:background="@drawable/rounded"
                     android:backgroundTint="#4B9460"
@@ -236,11 +237,11 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageViewWorker1"
+                        android:id="@+id/bAvatar1"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/worker1" />
+                        app:srcCompat="@drawable/worker2" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -264,7 +265,7 @@
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/plus2"
+                        android:id="@+id/bButton1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
@@ -283,7 +284,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/bAvatar2"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_weight="1"
@@ -319,6 +320,54 @@
                         app:iconGravity="textEnd" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/CopyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="#4B9460"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/bAvatar3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/worker2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nameOfWorker3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Имя" />
+
+                        <TextView
+                            android:id="@+id/pointsOfWorker3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="П-1 Д-1 М-1" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconGravity="textEnd" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -334,6 +383,7 @@
                 android:id="@+id/exitBuyMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:text="НАЗАД"
                 app:layout_constraintBottom_toBottomOf="parent" />
         </LinearLayout>
@@ -342,46 +392,44 @@
     </RelativeLayout>
 
 
-
     <LinearLayout
         android:id="@+id/EView"
         android:layout_width="360dp"
         android:layout_height="280dp"
         android:background="@drawable/rounded"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
             android:id="@+id/ETitle"
             android:layout_width="358dp"
             android:layout_height="35dp"
+            android:layout_marginTop="-30dp"
             android:text="Text View!"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginTop="-30dp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="358dp"
             android:layout_height="65dp"
-            android:text="TextView"
             android:layout_marginTop="20dp"
-            android:textAlignment="center"/>
+            android:text="TextView"
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/EConfirm"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="-50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="-50dp"
             android:text="OK" />
 
     </LinearLayout>
@@ -400,15 +448,157 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewDONTUSE4">
 
+        <TextView
+            android:id="@+id/statName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Name"
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/code" />
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/progStat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/code" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:text="Программирование" />
+
+            <TextView
+                android:id="@+id/statProgrammer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/marketStat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/designStat"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/market" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:text="Маркейтинг" />
+
+            <TextView
+                android:id="@+id/statMarket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/designStat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/progStat"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/design" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:text="Дизайн" />
+
+            <TextView
+                android:id="@+id/statDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/10" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marketStat"
+            app:layout_constraintBottom_toBottomOf="@+id/designStat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="Свойства личности"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="#4B9460"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="0"
+                        android:text="Ленивость" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Её описание" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -419,6 +609,7 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:layout_weight="1"
                 android:text="НАЗАД" />
         </LinearLayout>
